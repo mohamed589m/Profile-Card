@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #31363f;
+}
+
+.card {
+  /* border: 2px solid #bebebe; */
+  width: 450px;
+  height: 528px;
+  margin: 100px auto;
+  border-radius: 3px;
+  box-shadow: 1px 1px 10px 3px #686d76;
+}
+
+.avatar {
+  width: 100%;
+  height: 50%;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.data {
+  padding: 10px 10px 0px 10px;
+  color: #565a62;
+  font-variant: small-caps;
+  /* box-shadow: 1px 1px 10px 3px #cecfd0 inset; */
+  line-height: 1.5;
+}
+
+.skill-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  justify-content: center;
+  padding-bottom: 15px;
+  font-family: cursive;
+}
+
+.skill {
+  /* background-color: brown; */
+  border-radius: 3px;
+  padding: 3px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #fff;
+}
