@@ -2,6 +2,39 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
+const skills = [
+  {
+    skill: "React",
+    level: "beginner",
+    color: "#E34F26",
+  },
+  {
+    skill: "Javascript",
+    level: "intermediate",
+    color: "#61DAFB",
+  },
+  {
+    skill: "HTML+CSS",
+    level: "advanced",
+    color: "#2496ED",
+  },
+  {
+    skill: "Bootstrap",
+    level: "advanced",
+    color: "#EE4E4E",
+  },
+  {
+    skill: "C++",
+    level: "advanced",
+    color: "#3776AB",
+  },
+  {
+    skill: "Nodejs",
+    level: "intermediate",
+    color: "#9B86BD",
+  },
+];
+
 function App() {
   return (
     <div className="card">
@@ -16,8 +49,9 @@ function App() {
 
 function Avatar() {
   // eslint-disable-next-line jsx-a11y/img-redundant-alt
-  return <img className="avatar" src="Untitled1.png" alt="Image" />;
+  return <img className="avatar" src="Untitled.png" alt="Mohamed Tamer" />;
 }
+
 function Intro() {
   return (
     <div>
@@ -30,23 +64,33 @@ function Intro() {
     </div>
   );
 }
+
 function SkillList() {
   return (
     <div className="skill-list">
-      <Skill skill="React" emoji="👑" color="#E34F26" />
-      <Skill skill="Javascript" emoji="💥" color="#61DAFB" />
-      <Skill skill="HTML+CSS" emoji="🕹️" color="#2496ED" />
-      <Skill skill="Bootstrap" emoji="👌" color="#EE4E4E" />
-      <Skill skill="C++" emoji="💪" color="#3776AB" />
-      <Skill skill="Nodejs" emoji="🎰" color="#9B86BD" />
+      {skills.map((skill) => (
+        <Skill skillObj={skill} />
+      ))}
     </div>
   );
 }
-function Skill(props) {
+
+function Skill({ skillObj }) {
   return (
-    <div className="skill" style={{ backgroundColor: props.color }}>
-      <span>{props.skill}</span>
-      <span>{props.emoji}</span>
+    <div className="skill" style={{ backgroundColor: skillObj.color }}>
+      <span>{skillObj.skill}</span>
+      {/* <span>
+        {skillObj.level==="beginner"&&"👶"}
+        {skillObj.level==="intermediate"&&"👍"}
+        {skillObj.level==="advanced"&&"💪"}
+      </span> */}
+      <span>
+        {skillObj.level === "beginner"
+          ? "👶"
+          : skillObj.level === "intermediate"
+          ? "👍"
+          : "💪"}
+      </span>
     </div>
   );
 }
